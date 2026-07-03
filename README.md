@@ -2,7 +2,9 @@
 
 这是一个用于系统学习 LeetCode 算法专题的笔记仓库。
 
-当前已整理的专题：
+当前目标：先完成第一轮基础路线，建立题型识别能力和常用模板手感。
+
+## 当前已整理的专题
 
 1. 哈希表
 2. 双指针
@@ -10,18 +12,23 @@
 4. 二分查找
 5. 栈
 6. 综合练习课：Day 6 复盘
+7. 队列 / BFS
+8. 链表
 
 ## 目录结构
 
 ```txt
 leetcode-algorithm-notes/
 ├── README.md
+├── ROADMAP.md
 ├── algorithms/
 │   ├── 01-hash-table.md
 │   ├── 02-two-pointers.md
 │   ├── 03-sliding-window.md
 │   ├── 04-binary-search.md
-│   └── 05-stack.md
+│   ├── 05-stack.md
+│   ├── 06-queue-bfs.md
+│   └── 07-linked-list.md
 └── practice/
     └── day-06-review.md
 ```
@@ -35,33 +42,43 @@ leetcode-algorithm-notes/
 5. 今日练习题
 6. 精华总结
 
+## 当前题型判断树
+
+```txt
+快速查出现过 / 频率 / 配对 -> 哈希表
+有序数组 / 左右收缩 / 原地整理 -> 双指针
+连续子数组 / 子字符串 / 最长最短 -> 滑动窗口
+有序查位置 / 第一个满足条件 -> 二分查找
+最近未匹配 / 后进先出 -> 栈
+一层一层扩散 / 最短步数 -> 队列 / BFS
+修改 next / 节点连接关系 -> 链表
+```
+
 ## 推荐学习路线
 
 ```txt
 哈希表 → 双指针 → 滑动窗口 → 二分查找 → 栈 → 综合练习
+→ 队列/BFS → 链表 → 树 → 递归 → DFS → 综合练习
+→ 回溯 → 堆 → 贪心 → 动态规划 → 图论 → 综合练习
+→ 前缀和 → 并查集
 ```
 
-后续可以继续追加：
+从 Day 8 之后，第一轮基础路线还剩：
 
 ```txt
-队列/BFS、链表、树、递归、DFS、回溯、堆、贪心、动态规划、图论、前缀和、并查集
+10 个新专题 + 2 次综合练习 = 12 节课左右
 ```
 
-## GitHub 初始化建议
+详细计划见：[ROADMAP.md](./ROADMAP.md)
 
-如果你已经创建了空仓库，可以在本地执行：
+## 学习提醒
 
-```bash
-git init
-git add .
-git commit -m "init leetcode algorithm notes"
-git branch -M main
-git remote add origin <你的仓库地址>
-git push -u origin main
+如果感觉脑子不够用，不要硬灌。优先做三件事：
+
+```txt
+1. 复盘题型判断
+2. 重写核心模板
+3. 每类题只挑 1-2 道经典题写熟
 ```
 
-如果你使用 GitHub CLI：
-
-```bash
-gh repo create leetcode-algorithm-notes --private --source=. --remote=origin --push
-```
+算法学习不是一天把知识吃完，而是反复把题型和模板压进肌肉记忆里。
